@@ -1,0 +1,538 @@
+
+/* Основные настройки */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5eee4;
+    color: #654832;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/* Верхний колонтитул */
+
+.header {
+    background: #fffdf9;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e6d8c8;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #79583e;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #79583e;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b28b68;
+}
+
+/* Главный экран */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 70px 20px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: appear 1.2s ease;
+}
+
+.small-text {
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #a18468;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 8vw, 75px);
+    line-height: 1.2;
+    color: #654832;
+}
+
+.hero h1 span {
+    font-style: italic;
+    color: #a17b59;
+}
+
+.description {
+    margin: 25px auto;
+    max-width: 470px;
+    line-height: 1.9;
+    font-size: 14px;
+    color: #82674f;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #79583e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-size: 13px;
+}
+
+.main-button:hover {
+    background: #a17b59;
+    transform: translateY(-4px);
+}
+
+.decor {
+    position: absolute;
+    color: #c5a98d;
+    font-size: 40px;
+    opacity: 0.6;
+}
+
+.decor-one {
+    top: 15%;
+    left: 15%;
+}
+
+.decor-two {
+    bottom: 15%;
+    right: 17%;
+}
+
+.decor-three {
+    top: 20%;
+    right: 20%;
+}
+
+/* Заголовки секций */
+
+.photos-section {
+    padding: 80px 8%;
+    background: #fffdf9;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading p {
+    color: #a17b59;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.section-heading span {
+    font-size: 13px;
+    color: #a18a74;
+}
+
+/* Галерея фотографий */
+
+.gallery {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 35px;
+    align-items: center;
+}
+
+.photo {
+    background: white;
+    padding: 12px 12px 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(101, 72, 50, 0.13);
+    transition: 0.4s;
+    border: 3px solid #e5d4c1;
+}
+
+.photo img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 17px;
+}
+
+.photo p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+}
+
+.photo:hover {
+    transform: rotate(0deg) scale(1.06);
+    z-index: 2;
+}
+
+/* Разные формы и обводки */
+
+.photo-1 {
+    transform: rotate(-5deg);
+    border-radius: 4px;
+}
+
+.photo-1 img {
+    border-radius: 3px;
+}
+
+.photo-2 {
+    transform: rotate(4deg);
+    border-radius: 30px 5px 30px 5px;
+    border: 4px double #b99a7b;
+}
+
+.photo-2 img {
+    border-radius: 25px 4px 25px 4px;
+}
+
+.photo-3 {
+    transform: rotate(-3deg);
+    border-radius: 50% 50% 8px 8px;
+    border: 4px solid #c7aa8d;
+}
+
+.photo-3 img {
+    border-radius: 50% 50% 5px 5px;
+}
+
+.photo-4 {
+    transform: rotate(4deg);
+    border: 4px dashed #b99a7b;
+    border-radius: 20px;
+}
+
+.photo-4 img {
+    border-radius: 12px;
+}
+
+.photo-5 {
+    transform: rotate(-4deg);
+    border: 5px double #d0b79d;
+    border-radius: 50px 5px 50px 5px;
+}
+
+.photo-5 img {
+    border-radius: 35px 3px 35px 3px;
+}
+
+.photo-6 {
+    transform: rotate(3deg);
+    border: 4px solid #a98a6d;
+    border-radius: 50% 50% 10px 10px;
+}
+
+.photo-6 img {
+    border-radius: 50% 50% 5px 5px;
+}
+
+/* Блок о Насте */
+
+.about {
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-card {
+    background: #fffdf9;
+    max-width: 650px;
+    padding: 55px 45px;
+    text-align: center;
+    border: 2px solid #e3d0ba;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(101, 72, 50, 0.08);
+}
+
+.heart {
+    font-size: 35px;
+    color: #a17b59;
+}
+
+.about-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.about-card p {
+    line-height: 2;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #82674f;
+}
+
+.about-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+/* Нижний колонтитул */
+
+.footer {
+    background: #654832;
+    color: #fffdf9;
+    padding: 55px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.footer h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #e7d7c6;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.socials h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+}
+
+.socials a {
+    color: #f5eee4;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #d4b89b;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #8d7057;
+    font-size: 12px;
+    color: #e7d7c6;
+}
+
+/* Анимация */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптация под телефоны */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+
+    .photo img {
+        height: 180px;
+    }
+
+    .about-card {
+        padding: 35px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+
+    .photo img {
+        height: 250px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+}
+
+
+/* Особенные блоки */
+
+.special-section {
+    padding: 60px 20px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.special-card,
+.mood-card {
+    background: #fffdf9;
+    border: 2px solid #e3d0ba;
+    border-radius: 25px;
+    padding: 40px 30px;
+    text-align: center;
+    width: 340px;
+    box-shadow: 0 10px 30px rgba(101,72,50,0.08);
+}
+
+.special-card h2,
+.mood-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.special-card p,
+.mood-card p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.special-icon {
+    font-size: 40px;
+}
+
+.counter {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: #a17b59;
+    margin: 20px 0 5px;
+}
+
+.counter-label {
+    font-size: 11px;
+    color: #a17b59;
+}
+
+.mood-button {
+    background: #79583e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin-top: 25px;
+    font-family: 'Comfortaa', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mood-button:hover {
+    background: #a17b59;
+    transform: scale(1.05);
+}
+
+.message-box {
+    margin-top: 20px;
+    color: #79583e;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 1.8;
+    min-height: 45px;
+}
+
+/* Летающие сердечки */
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    color: #b99a7b;
+    pointer-events: none;
+    z-index: 1000;
+    animation: heartFloat 5s linear forwards;
+}
+
+@keyframes heartFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .special-card,
+    .mood-card {
+        width: 100%;
+    }
+}
